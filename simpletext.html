@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Display</title>
+    <style>
+        /* Importing a clean, readable font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary-color: #2a2a72;
+            --secondary-color: #009ffd;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            color: var(--dark-color);
+        }
+        
+        .text-container {
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .text-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        h1 {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: justify;
+            color: var(--dark-color);
+        }
+        
+        p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .highlight {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        @media (max-width: 768px) {
+            .text-container {
+                padding: 2rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <h1>Welcome to <span class="highlight">Minimal</span> Text</h1>
+        
+        <p>This simple webpage demonstrates how even basic text can be presented beautifully with thoughtful design. Every element here exists to enhance your reading experience without distraction.</p>
+        
+        <p>Good design is as little design as possible. In this space, we celebrate the elegance of simplicity, where every typographic choice serves a purpose and nothing more.</p>
+        
+        <p>The layout uses carefully considered spacing, clean typography, and subtle interactions to create an engaging experience. Notice how the container lifts slightly when you hover over it - a small touch that adds personality without overwhelm.</p>
+        
+        <p>This minimalist approach ensures the content remains the hero. No unnecessary images, no decorative elements - just words presented in their purest, most accessible form.</p>
+    </div>
+    
+    <footer>
+        Crafted with care © 2023 | Simple Text Display
+    </footer>
+</body>
+</html>
